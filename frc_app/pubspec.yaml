@@ -1,0 +1,43 @@
+name: frc_strategy_app
+description: FRC Strategy and Forecasting Application
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Core dependencies
+  sqflite: ^2.3.0
+  path: ^1.8.0
+  path_provider: ^2.1.1
+  http: ^1.1.0
+
+  # ONNX Runtime for ML inference
+  onnxruntime: ^1.14.1
+
+  # State management (optional)
+  provider: ^6.1.1
+
+  # Utility packages
+  intl: ^0.18.1
+
+  # UI components
+  flutter_spinkit: ^5.2.0
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Assets (for ML models)
+  assets:
+    - assets/models/
+    - assets/data/

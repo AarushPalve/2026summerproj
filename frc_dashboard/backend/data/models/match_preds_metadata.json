@@ -1,0 +1,64 @@
+{
+  "year": 2026,
+  "artifact_path": "match_winner_with_rf_2026.pt",
+  "feature_count": 293,
+  "hyperparameters": {
+    "hidden_dim": 64,
+    "dropout_rate": 0.1,
+    "learning_rate": 0.0005,
+    "weight_decay": 1e-05,
+    "batch_size": 128
+  },
+  "best_tuning_result": {
+    "hidden_dim": 64,
+    "dropout_rate": 0.1,
+    "learning_rate": 0.0005,
+    "weight_decay": 1e-05,
+    "batch_size": 128,
+    "test_accuracy": 0.7698285101822079,
+    "test_auc": 0.8484622501428742,
+    "test_log_loss": 0.5103300834201998,
+    "best_val_loss": 0.4604065716266632
+  },
+  "random_forest": {
+    "best_params": {
+      "max_depth": 10,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "n_estimators": 100
+    },
+    "metrics": {
+      "train_accuracy": 0.8890005359056806,
+      "test_accuracy": 0.7596463022508039,
+      "train_auc": 0.965866425646728,
+      "test_auc": 0.841034800196519,
+      "train_log_loss": 0.2923823235655988,
+      "test_log_loss": 0.49370325659562003
+    }
+  },
+  "simple_ensemble": {
+    "method": "average_probabilities",
+    "models": [
+      "neural_network",
+      "random_forest"
+    ],
+    "metrics": {
+      "train_accuracy": 0.8365487674169346,
+      "test_accuracy": 0.7706323687031083,
+      "train_auc": 0.9264473899100275,
+      "test_auc": 0.850187994164435,
+      "train_log_loss": 0.3608797559673999,
+      "test_log_loss": 0.48097470055339026
+    }
+  },
+  "metrics": {
+    "train_accuracy": 0.7965568060021436,
+    "test_accuracy": 0.7655412647374062,
+    "train_auc": 0.8831102246037528,
+    "test_auc": 0.8492088608964348,
+    "train_log_loss": 0.42652455917149845,
+    "test_log_loss": 0.4979348495036306,
+    "best_epoch": 6,
+    "best_val_loss": 0.46670129895210266
+  }
+}

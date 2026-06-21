@@ -1,0 +1,19 @@
+{
+  "year": 2026,
+  "artifact_path": "match_winner_nn_2026.pt",
+  "feature_count": 9,
+  "base_feature_columns": [
+    "matches_played"
+  ],
+  "metrics": {
+    "train_accuracy": 0.6431538049303323,
+    "val_accuracy": 0.6503215434083601,
+    "train_auc": 0.7062166070242979,
+    "val_auc": 0.701536581474764,
+    "train_log_loss": 0.621955126301805,
+    "val_log_loss": 0.634145829699003,
+    "best_epoch": 23,
+    "best_val_loss": 0.5963688492774963,
+    "skipped_matches": 47
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "year": 2026,
+  "artifact_path": "match_winner_all_features_2026.pt",
+  "feature_count": 293,
+  "hyperparameters": {
+    "hidden_dim": 128,
+    "dropout_rate": 0.25
+  },
+  "random_forest": {
+    "best_params": {
+      "max_depth": 10,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "n_estimators": 100
+    },
+    "metrics": {
+      "train_accuracy": 0.8890005359056806,
+      "test_accuracy": 0.7596463022508039,
+      "train_auc": 0.965866425646728,
+      "test_auc": 0.841034800196519,
+      "train_log_loss": 0.2923823235655988,
+      "test_log_loss": 0.4937032565956201
+    }
+  },
+  "neural_network_all_features": {
+    "train_accuracy": 0.7920685959271169,
+    "test_accuracy": 0.7647374062165059,
+    "train_auc": 0.8794726821566734,
+    "test_auc": 0.8473356987546775
+  },
+  "simple_ensemble_all_features": {
+    "method": "average_probabilities",
+    "models": [
+      "neural_network_all_features",
+      "random_forest"
+    ],
+    "metrics": {
+      "train_accuracy": 0.8423097534833869,
+      "test_accuracy": 0.7676848874598071,
+      "train_auc": 0.9266397152878099,
+      "test_auc": 0.8489786462977713,
+      "train_log_loss": 0.36792485051731094,
+      "test_log_loss": 0.4809899757964336
+    }
+  }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FRC Strategic Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        .api-info {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .api-endpoints {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .endpoint-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: white;
+        }
+        .endpoint-card h3 {
+            margin-top: 0;
+            color: #1976d2;
+        }
+        .endpoint-card p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FRC Strategic Dashboard</h1>
+        <p>Welcome to the FRC Strategic Dashboard. This application provides real-time analytics and predictions for FRC matches.</p>
+        
+        <div class="api-info">
+            <h2>API Information</h2>
+            <p>The backend API is running. You can access the following endpoints:</p>
+        </div>
+        
+        <div class="api-endpoints">
+            <div class="endpoint-card">
+                <h3>/api/v1/matches</h3>
+                <p>Get match data and results</p>
+            </div>
+            <div class="endpoint-card">
+                <h3>/api/v1/teams</h3>
+                <p>Get team information and statistics</p>
+            </div>
+            <div class="endpoint-card">
+                <h3>/api/v1/predictions</h3>
+                <p>Get match predictions using ML models</p>
+            </div>
+            <div class="endpoint-card">
+                <h3>/api/v1/stats</h3>
+                <p>Get statistical analysis</p>
+            </div>
+        </div>
+        
+        <div class="api-info" style="margin-top: 30px;">
+            <h2>API Documentation</h2>
+            <p>For detailed API documentation, visit: <a href="/api/docs" target="_blank">/api/docs</a></p>
+            <p>For interactive API exploration, visit: <a href="/api/redoc" target="_blank">/api/redoc</a></p>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 15px; background-color: #fff3e0; border-radius: 4px;">
+            <h2>Frontend Status</h2>
+            <p>The React frontend is currently being built. Once complete, it will be automatically served from this endpoint.</p>
+            <p>If you see this page, please run <code>cd frontend && npm install && npm run build</code> to build the frontend.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Simple API health check
+        fetch('/health')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Backend health:', data);
+            })
+            .catch(error => {
+                console.error('Error checking backend health:', error);
+            });
+    </script>
+</body>
+</html>
